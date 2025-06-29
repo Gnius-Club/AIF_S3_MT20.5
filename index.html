@@ -1,24 +1,291 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-S3-M20.5</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
-  <script src="script.js"></script>
-</body>
 
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook Misión 20.5: Calibración del Sistema Físico</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="timer">⏱️ 00:00</span>
+                <button id="startStop">Start</button>
+                <button id="reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+
+            <div class="sidebar-info">
+                <p>💡 Esta es una sesión de refuerzo práctico para construir, calibrar y depurar el sistema físico del proyecto final.</p>
+                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
+
+            <!-- SECCIÓN "DE UN VISTAZO" -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
+                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
+                <div class="overview-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">Objetivos, Secuencia y Entregable</th>
+                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Objetivos:</strong>
+                                    <ul>
+                                        <li>Que los estudiantes construyan físicamente el sistema que diseñaron en la misión anterior.</li>
+                                        <li>Que calibren los sensores y ajusten los umbrales en su código basándose en datos reales.</li>
+                                        <li>Que depuren la interacción entre los componentes de hardware y su código Python.</li>
+                                    </ul>
+                                    <strong>Secuencia de Clase:</strong>
+                                    <ul>
+                                        <li><strong class="tactic-highlight">⚡A.I. GYM:</strong> Repaso estratégico de protocolos de depuración de sistemas integrados.</li>
+                                        <li><strong class="tactic-highlight">⚡BRAIN SPARK (Construcción y Calibración):</strong> Ensamblaje físico y ajuste de parámetros del sistema.</li>
+                                        <li><strong class="tactic-highlight">⚡DEPURACIÓN ASISTIDA:</strong> Uso de Xolo para diagnosticar problemas de hardware, software y energía.</li>
+                                        <li><strong class="tactic-highlight">⚡GNIUS STORM:</strong> Showcase de prototipos, síntesis de "insights" y reflexión sobre los desafíos de la integración.</li>
+                                    </ul>
+                                    <strong>Entregable Clave:</strong>
+                                    <ul>
+                                        <li>Un prototipo físico funcional del sistema diseñado, con todos los componentes conectados y operativos.</li>
+                                        <li>Un script de Python calibrado, donde los umbrales han sido ajustados con base en pruebas empíricas.</li>
+                                        <li>Sistema enviando datos estables y coherentes a ThingSpeak.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <strong>Materiales Específicos:</strong>
+                                    <ul>
+                                        <li>Proyector o pantalla interactiva.</li>
+                                        <li>Conexión a internet estable.</li>
+                                        <li>Acceso a MakeCode y ThingSpeak.</li>
+                                        <li>Chat "Agente Gnius" (Xolo) operativo.</li>
+                                        <li>Presentación de diapositivas (Diapositivas 1-8).</li>
+                                        <li>Kits completos con todos los sensores y actuadores para el ensamblaje.</li>
+                                        <li>(Opcional) Fuentes de alimentación externas para actuadores de alta potencia como bombas.</li>
+                                    </ul>
+                                    <strong>Preparación Previa para ESTA Sesión:</strong>
+                                    <ol>
+                                        <li><strong>Verificación del Entorno Digital y Físico (Interna):</strong>
+                                            <ul>
+                                                <li>Asegurar que haya suficientes componentes para que todos los equipos construyan sus diseños.</li>
+                                                <li>Tener listas las fuentes de alimentación externas si se prevé el uso de bombas.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Familiarización Conceptual y Técnica:</strong> Repasar el protocolo de depuración (Aislar, Verificar, Usar `print`). Estar preparado para guiar en la solución de problemas de energía.</li>
+                                        <li><strong>Preparación de la Demostración Práctica:</strong> Tener un sistema físico ya construido (ej. Alerta de Inundación) para poder demostrar en vivo cómo aislar un problema o cómo un problema de energía causa un reinicio.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
+
+            <div class="activity-card" id="activity-1">
+                <h2>⚡ Actividad 1: Saludo de IA y Contexto ⏰ 3 minutos</h2>
+                <p>Establecer el tono de la sesión, activar la IA y presentar la fase de construcción.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Bienvenida y Contexto Estratégico</h3>
+                            <p>(Proyectar Diapositiva 2) El facilitador da la bienvenida y presenta el enfoque de la misión.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Buenos días, ingenieros. Tienen los planos. Tienen el código base. Hoy es el día de la construcción. Ensamblarán el sistema físico, conectarán los componentes, y se enfrentarán al desafío más real de la ingeniería: hacer que el hardware y el software trabajen en perfecta armonía. Hoy, la teoría se encuentra con la realidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Activación y Personalización de Xolo</h3>
+                            <p>El facilitador guía a los alumnos para que inicien su sesión de trabajo individual.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Inicien su sesión con Xolo como de costumbre, compartiendo su perfil de aprendizaje e interés. Por ejemplo: <strong>'Hola Xolo. Soy Ana, perfil Ingeniero, y hoy mi foco es la integración y la depuración.'</strong> Esto posicionará a Xolo como su ingeniero de pruebas. Procedan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-2">
+                <h2>⚡ Actividad 2: "I Can Statement" y Presentación del Desafío ⏰ 2 minutos</h2>
+                <p>Clarificar la meta de aprendizaje enfocada en la construcción y calibración de sistemas físicos.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: "I Can Statement" de Integración</h3>
+                            <p>(Proyectar Diapositiva 3) El facilitador presenta el objetivo de aprendizaje de la sesión.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">La meta de hoy es totalmente práctica. Al finalizar, podrán afirmar: <strong>'Yo puedo ensamblar, calibrar y depurar un sistema físico, asegurando que sus componentes de hardware y software trabajen juntos de forma fiable.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-3">
+                <h2>⚡ Actividad 3: A.I. GYM (Estrategias de Depuración) ⏰ 5 minutos</h2>
+                <p>Facilitar un repaso estratégico sobre protocolos de depuración para sistemas integrados.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Instrucción para el Aprendizaje Conceptual</h3>
+                            <p>(Proyectar Diapositiva 4) El facilitador dirige a los alumnos para que aprendan un protocolo de depuración.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Iniciamos el A.I. GYM. Antes de construir, repasen las estrategias de depuración. De forma individual, usen este prompt con Xolo: <strong>'Xolo, dame un protocolo de 3 pasos para depurar un sistema físico complejo cuando el hardware y el software no se hablan.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Síntesis del Facilitador</h3>
+                            <p>El facilitador resume verbalmente el protocolo para asegurar la comprensión.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Recuerden este protocolo de 3 pasos que Xolo les ha dado: 1. **Aislar:** Prueben un componente a la vez. 2. **Verificar lo Físico:** El 80% de los errores están en el hardware. 3. **Confiar en los Datos:** Usen `print()` para ver la verdad, no para adivinar. Este método les ahorrará horas de frustración.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-4">
+                 <h2>⚡ Actividad 4: Brain Spark (Construcción y Calibración) ⏰ 27 minutos</h2>
+                <p>Los estudiantes construyen, calibran y depuran su sistema físico en parejas.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Construcción y Prueba del Sistema Físico</h3>
+                             <p>(Proyectar Diapositiva 5) El facilitador instruye a los alumnos a ensamblar sus sistemas.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Manos a la obra. Formen sus parejas. Ensamblen el sistema físico que diseñaron. Conecten todos los sensores y actuadores a su IOTbit. Carguen el código que generaron y comiencen las pruebas iniciales. Su objetivo es tener un prototipo ensamblado.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Calibración de Umbrales con Datos Reales</h3>
+                            <p>(Proyectar Diapositiva 6) Las parejas calibran los umbrales de su código usando mediciones reales.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                 <p class="dialogue assistant">Ahora, la calibración. Su código tiene 'números mágicos' en los umbrales. Reemplácenlos con valores reales. Usen la función `print()` para medir los valores de sus sensores en diferentes condiciones (ej. tierra seca vs. tierra húmeda) y ajusten los umbrales en su código para que reflejen la realidad de su entorno.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 3: Depuración Asistida de Problemas de Integración</h3>
+                             <p>(Proyectar Diapositiva 7) Se guía a las parejas para que trabajen con Xolo en la solución de problemas de hardware y energía.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                 <p class="dialogue assistant">En esta fase es donde aparecen los problemas más interesantes. Si su Micro:bit se reinicia al activar un motor, es un problema de energía. Si un sensor da lecturas erráticas, es un problema de conexión. Describan el síntoma exacto a Xolo. Por ejemplo: <strong>'Xolo, cuando conectamos la bomba, el Micro:bit se reinicia.'</strong> Él los guiará para diagnosticar la causa raíz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-5">
+                <h2>⚡ Actividad 5: Gnius STORM (Reflexión) ⏰ 5 minutos</h2>
+                <p>El facilitador modera una reflexión final enfocada en los desafíos de la integración hardware-software.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Gnius STORM (Think - Individual)</h3>
+                            <p>(Proyectar Diapositiva 8) Instrucción para la reflexión individual.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Bien, para cerrar, nuestro Think-Pair-Share. Individualmente, un minuto para pensar: ¿Cuál fue el problema más inesperado que encontraron hoy? ¿Fue un error de software, de hardware o de energía?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Gnius STORM (Pair - Parejas)</h3>
+                            <p>Los alumnos discuten la importancia de la calibración.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Ahora, en parejas, discutan durante dos minutos: ¿Por qué la calibración es un paso absolutamente crucial que no se puede saltar en la ingeniería de productos del mundo real?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 3: Gnius STORM (Share & Synthesis)</h3>
+                            <p>Algunas parejas comparten sus desafíos y el facilitador cierra la sesión.</p>
+                        </div>
+                        <div class="collapsible-content">
+                                <p class="dialogue assistant">Escuchemos a algunas parejas. Compartan un éxito de construcción o un desafío de depuración que su equipo superó hoy. (Escuchar respuestas). Han enfrentado los desafíos del mundo real. Han visto que la ingeniería es un diálogo constante entre el código y el hardware. Su sistema físico ahora es robusto y está calibrado. En la próxima sesión, le construiremos su 'alma' digital: la interfaz final de su Gemelo Digital.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
